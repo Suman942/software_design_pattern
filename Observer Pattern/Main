@@ -1,0 +1,11 @@
+fun main() {
+	val channel = YoutubeChannel()
+    val user1 = User("Suman")
+    val user2 = User("Rahul")
+
+    channel.subscribe(user1)
+    channel.subscribe(user2)
+
+    channel.uploadVideo("Youtube")
+      
+}
