@@ -1,0 +1,24 @@
+class User private constructor(
+	val name:String,
+    val age:Int
+){
+    class Builder{
+         var name:String = ""
+         var age:Int = 0
+        
+        fun setName(name:String) = apply{
+            this.name = name
+        }
+        
+        fun setAge(age:Int) = apply{
+            this.age = age
+        }
+        
+        fun build() : User{
+            require(age > 18){
+                "Age should be greater then 18"
+            }
+            return User(name,age)
+        }
+    }
+}
