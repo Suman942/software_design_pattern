@@ -1,0 +1,14 @@
+// for email notification
+class EmailNotification :Notification{
+    
+    override fun send(){
+        println("Email Notification")
+    }
+}
+
+// for phone notification
+class PhoneNotification : Notification{
+    override fun send(){
+          println("Phone Notification")
+    }
+}
