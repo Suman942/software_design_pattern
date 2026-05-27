@@ -1,0 +1,4 @@
+fun main() {
+	val notification = NotificationFactory.create("Phone")
+    notification.send()
+}
