@@ -1,0 +1,6 @@
+val user = User.Builder()
+    .setName("Suman")
+    .setAge(39)
+    .build()
+    
+    println(user.age)// 39
