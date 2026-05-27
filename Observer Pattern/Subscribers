@@ -1,0 +1,22 @@
+class YoutubeChannel{
+   private val subscribers = mutableListOf<Observer>()
+   
+   fun subscribe(observer:Observer){
+       subscribers.add(observer)
+   }
+   
+   fun unsubscribe(observer:Observer){
+       subscribers.remove(observer)
+   }
+   
+   fun uploadVideo(title:String){
+       notifySubscriber(title)
+   }
+    
+   private fun notifySubscriber(title:String){
+      
+       for(subscriber in subscribers){
+           subscriber.update(title)
+       }
+   }
+}
