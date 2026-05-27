@@ -1,0 +1,10 @@
+object NotificationFactory{
+    
+    fun create(type:String) : Notification{
+        return when(type){
+            "Email" -> EmailNotification()
+            "Phone" -> PhoneNotification()
+            else -> throw IllegalArgumentException("Invalid type")
+        }
+    }
+}
